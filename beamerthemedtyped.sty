@@ -1,0 +1,42 @@
+\RequirePackage{fontspec}
+
+% fonts
+\usefonttheme{serif}
+
+\newfontfamily\InriaSerif{Inria Serif}
+\newfontfamily\RobotoMono{Roboto Mono}
+
+\setmainfont{Inria Serif}
+\setmonofont{Roboto Mono}
+
+% colors
+\setbeamercolor{title}{fg=black}
+\setbeamercolor{frametitle}{fg=black}
+
+\setbeamercolor{section in toc}{fg=black}
+
+\setbeamercolor{itemize item}{fg=black}
+\setbeamercolor{itemize subitem}{fg=black}
+\setbeamercolor{itemize subsubitem}{fg=black}
+\setbeamercolor{enumerate item}{fg=black}
+\setbeamercolor{enumerate subitem}{fg=black}
+\setbeamercolor{enumerate subsubitem}{fg=black}
+
+\setbeamercolor{block title}{fg=gray}
+\setbeamercolor{block title example}{fg=gray}
+
+% blocks
+\setbeamertemplate{frametitle}{
+    \nointerlineskip
+    \vskip3ex
+    {\usebeamercolor[fg]{frametitle}\insertframetitle}
+}
+
+\setbeamertemplate{section in toc}{
+  \hskip2ex
+  \inserttocsectionnumber
+  \hskip2ex
+  {\usebeamercolor*[fg]{normal text}\inserttocsection}%
+}
+
+\setbeamertemplate{itemize item}[circle]

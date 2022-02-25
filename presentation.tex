@@ -1,0 +1,137 @@
+\documentclass{beamer}
+
+\usetheme{dtyped}
+
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  allcolors=.,
+  urlcolor=blue,
+}
+\usepackage[
+  backend=biber,
+  style=numeric,
+  isbn=false,
+  url=false,
+  doi=false
+]{biblatex}
+\addbibresource{citations.bib}
+
+% from https://tex.stackexchange.com/questions/178800/creating-sections-each-with-title-pages-in-beamers-slides
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+\begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
+
+\title{\texttt{dependently-typed}}
+\subtitle{A programming languages club at Georgia Tech}
+\author{Elton Pinto}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \begin{center}
+    Slides can be found at \\
+    \small\url{https://github.com/dependently-typed/promo}
+  \end{center}
+\end{frame}
+
+\section{What is \texttt{dependently-typed}?}
+
+\begin{frame}{About the club}
+  \begin{columns}
+    \begin{column}{0.8\textwidth}
+      \begin{itemize}
+      \item Programming languages (PL) and compilers club
+      \item Open to undergraduate, graduate, and PhD students
+      \item Weekly meetings on Tuesday, 6-7pm CCB 103
+      \item Named after Richard Eisenberg's \citetitle{eisenberg2016dependent} \cite{eisenberg2016dependent}
+      \end{itemize}
+    \end{column}
+
+    \begin{column}{0.15\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{assets/dragon.png}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{What do we do?}
+  \begin{itemize}
+  \item Talks, workshops, and paper reading sessions
+  \item Projects
+  \item Networking and community building
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Talks}
+  \begin{itemize}
+    \item Hosted during weekly meetings
+    \item Examples:
+      \begin{itemize}
+        \item Python internals
+        \item Lambda Calculus
+        \item Research papers
+      \end{itemize}
+    \item Schedule: \url{https://dtyped.netlify.app/wiki/schedule}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Projects}
+  \begin{itemize}
+    \item Adding a pipe operator to CPython
+    \item Retrofitting a type system onto Lua
+    \item Interpreter for Bel
+    \item Learn more at \url{https://dtyped.netlify.app/wiki/projects/}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Interested in getting involved?}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \centering
+      Join the discord!
+    \end{column}
+    \begin{column}{0.3\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{assets/join-discord-qr.png}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{hack-a-lang 0001}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      Learn how to write a programming language from scratch at hack-a-lang!
+    \end{column}
+    \begin{column}{0.3\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{assets/hack-a-lang-qr.png}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\section{Questions}
+
+\begin{frame}
+  \begin{itemize}
+  \item Website: \url{https://dtyped.netlify.app}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Bibliography}
+\printbibliography
+\end{frame}
+
+\end{document}
